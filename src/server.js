@@ -20,7 +20,7 @@ const applyMiddlewares = () => {
 };
 
 const startServer = () => {
-  app.listen(3000, () => {
+  app.listen(process.env.PORT || 3000, () => {
     console.log("Servidor iniciado: http://localhost:3000/");
   });
 };
