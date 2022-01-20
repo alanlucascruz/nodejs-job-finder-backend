@@ -1,7 +1,7 @@
 const Vaga = require("../models/Vaga");
 const multer = require("multer");
 const path = require("path");
-const { unlink } = require("fs");
+const { existsSync, unlink } = require("fs");
 
 const index = async (req, res) => {
   try {
@@ -84,7 +84,7 @@ const upload = (req, res) => {
       // delete old image if exists
       const oldData = await Vaga.findById(req.params.id).select("imagem");
 
-      if (oldData.imagem) {
+      if (oldData.imagem && existsSync(`public/${oldData.imagem}`)) {
         unlink(`public/${oldData.imagem}`, (error) => {
           if (error) throw error;
         });
