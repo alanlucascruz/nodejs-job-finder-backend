@@ -24,9 +24,7 @@ const signIn = async (req, res) => {
       return res.status(401).json({ message: "E-mail e/ou senha inválidos." });
     }
 
-    const token = jwt.sign({ _id: usuario._id }, process.env.JWT_SECRET, {
-      expiresIn: JWT_EXPIRES_IN,
-    });
+    const token = jwt.sign({ _id: usuario._id }, process.env.JWT_SECRET);
 
     delete usuario._doc.senha;
 
@@ -60,9 +58,7 @@ const signUp = async (req, res) => {
       senha: senhaCriptografada,
     });
 
-    const token = jwt.sign({ _id: usuario._id }, process.env.JWT_SECRET, {
-      expiresIn: JWT_EXPIRES_IN,
-    });
+    const token = jwt.sign({ _id: usuario._id }, process.env.JWT_SECRET);
 
     delete usuario._doc.senha;
 
