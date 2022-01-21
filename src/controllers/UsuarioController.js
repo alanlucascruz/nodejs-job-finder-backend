@@ -37,7 +37,11 @@ const updateFavorite = async (req, res) => {
       await Usuario.updateOne({ _id: req.usuario._id }, usuario);
     }
 
-    res.json(usuario);
+    const usuarioUpdated = await Usuario.findById(req.usuario._id).populate(
+      "vagas_favoritas"
+    );
+
+    res.json(usuarioUpdated);
   } catch (error) {
     res.status(500).json({ message: "Erro ao favoritar a vaga.", error });
   }
