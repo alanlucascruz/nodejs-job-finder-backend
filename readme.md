@@ -26,15 +26,15 @@ npm init
 
 ### Instalar o Bcryptjs, que criptografa senhas do base de dados
 
-> npm install Bcryptjs --save
+> npm install bcryptjs
 
 ### Instalar o Multer, que permite criar uploads para o servidor
 
 > npm install multer --save
 
-### Instalar o JSONWebToken, que criar Tokens que podem ser recebidos via Headers
+### Instalar o JSONWebToken, que cria Tokens que podem ser recebidos via Headers
 
-> npm install multer --save
+> npm install jsonwebtoken
 
 ### Instalar/atualizar depêndencias
 

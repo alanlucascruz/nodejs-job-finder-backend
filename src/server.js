@@ -9,7 +9,7 @@ const connectDatabase = async () => {
   const password = process.env.DB_PASSWORD;
 
   await mongoose.connect(
-    `mongodb+srv://${user}:${password}@cluster0.tx3jf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+    `mongodb+srv://${user}:${password}@cluster0.tx3jf.mongodb.net/?retryWrites=true&w=majority`
   );
 };
 

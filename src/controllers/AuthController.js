@@ -2,7 +2,7 @@ const Usuario = require("../models/Usuario");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
-const JWT_EXPIRES_IN = "7 days";
+// const JWT_EXPIRES_IN = "7 days";
 
 const signIn = async (req, res) => {
   try {
