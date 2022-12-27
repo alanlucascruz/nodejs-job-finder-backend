@@ -1,7 +1,7 @@
 {
   "name": "back-end-node",
   "version": "1.0.0",
-  "description": "- Criar o arquivo package",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
