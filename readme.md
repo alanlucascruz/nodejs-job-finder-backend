@@ -53,6 +53,6 @@ Para rodar o servidor com nodemon, use:
 
 > npm run dev
 
-Para rodar o servidor com node, use:
+Para rodar o servidor sem o nodemon, use:
 
 > npm start
